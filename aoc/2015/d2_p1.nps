@@ -1,0 +1,56 @@
+(d2.txt) readf
+
+/edef {exch def} def
+/d= {dup =} def
+
+% a b c -> min(a, b, c)
+/3min {
+  /c edef
+  /b edef
+  /a edef
+
+  a b lt
+  {a}
+  {b}
+  ifelse
+
+  dup c lt
+  {}
+  {pop c}
+  ifelse
+} def
+
+~strings begin
+  /split load
+end
+/split edef
+
+(\n) split
+
+/result 0 def
+
+{
+  dup
+  () eq
+  {exit}
+  if
+
+  (x) split
+  {} forall
+
+  cvi /h edef
+  cvi /w edef
+  cvi /l edef
+
+  l w mul dup /a1 edef 2 mul
+  w h mul dup /a2 edef 2 mul
+  h l mul dup /a3 edef 2 mul
+
+  add add
+
+  a1 a2 a3 3min add
+
+  result add /result edef
+} forall
+
+result =

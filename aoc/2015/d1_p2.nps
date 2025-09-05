@@ -1,0 +1,28 @@
+(d1.txt) readf
+
+/n 0 def
+/pos 1 def
+
+/inc {dup load 1 add def} def
+
+~strings begin
+  chars
+end
+
+{
+  dup
+
+  (\() eq
+  {/n inc}
+  if
+
+  (\)) eq
+  {/n n 1 sub def}
+  if
+
+  n 0 lt
+  {pos = quit}
+  if
+
+  /pos inc
+} forall

@@ -1,0 +1,21 @@
+(d1.txt) readf
+
+/n 0 def
+
+~strings begin
+  chars
+end
+
+{
+  dup
+
+  (\() eq
+  {/n n 1 add def}
+  if
+
+  (\)) eq
+  {/n n 1 sub def}
+  if
+} forall
+
+n =
