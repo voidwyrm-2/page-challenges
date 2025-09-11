@@ -38,9 +38,9 @@ end
   (x) split
   {} forall
 
-  cvi /h edef
-  cvi /w edef
-  cvi /l edef
+  stn /h edef
+  stn /w edef
+  stn /l edef
 
   l w mul dup /a1 edef 2 mul
   w h mul dup /a2 edef 2 mul

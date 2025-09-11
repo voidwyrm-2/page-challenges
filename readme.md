@@ -8,4 +8,4 @@ Various programming challenge solutions using PostScript.
 
 In order to run these, you'll need my PostScript implementation, [NPScript](https://github.com/voidwyrm-2/npscript).
 
-These files need version >= 0.5.13.
+These files need version >= 0.17.2.
