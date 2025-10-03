@@ -1,11 +1,12 @@
-# postscript-challenges
+# page-challenges
 
-Various programming challenge solutions using PostScript.
+Various programming challenge solutions using Page, a PostScript-like language.
 
 **Challenges**
 - [Advent of Code](https://adventofcode.com)
 - [Project Euler](https://projecteuler.net/archives)
+- [Leetcode](https://leetcode.com/problems)
 
-In order to run these, you'll need my PostScript implementation, [NPScript](https://github.com/voidwyrm-2/npscript).
+In order to run these, you'll the need the Page interpreter: https://github.com/voidwyrm-2/page/releases/latest.
 
 These files need version >= 0.17.2.
