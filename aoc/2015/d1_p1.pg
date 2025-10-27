@@ -2,9 +2,7 @@
 
 /n 0 def
 
-~strings begin
-  chars
-end
+(strings) import {chars} scoped
 
 {
   dup

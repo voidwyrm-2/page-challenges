@@ -1,3 +1,5 @@
+(strings) import /split from
+
 (d2.txt) readf
 
 /edef {exch def} def
@@ -5,6 +7,7 @@
 
 % a b c -> min(a, b, c)
 /3min {
+3 dict begin
   /c edef
   /b edef
   /a edef
@@ -18,12 +21,8 @@
   {}
   {pop c}
   ifelse
-} def
-
-~strings begin
-  /split load
 end
-/split edef
+} def
 
 (\n) split
 
@@ -50,7 +49,7 @@ end
 
   a1 a2 a3 3min add
 
-  result add /result edef
+  /result result add def
 } forall
 
 result =

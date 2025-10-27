@@ -5,9 +5,7 @@
 
 /inc {dup load 1 add def} def
 
-~strings begin
-  chars
-end
+(strings) import {chars} scoped
 
 {
   dup

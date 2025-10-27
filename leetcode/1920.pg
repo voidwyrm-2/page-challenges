@@ -11,13 +11,18 @@
 %     = [0,1,2,4,5,3]
 
 /sol {
-0 dict begin
+4 dict begin
   /arr exch def
   /i 0 def
   /inc {/i i 1 add def} def
   /res arr length list def
 
-  [arr {arr exch get res exch i exch put inc} forall]
+  [ arr
+    { arr exch get
+      res exch i
+      exch put inc
+    } forall
+  ]
   
   res
 end

@@ -9,4 +9,36 @@
 % Explanation: You can exchange 3 empty bottles to get 1 full water bottle.
 % Number of water bottles you can drink: 9 + 3 + 1 = 13.
 
+% Based on this very helpful equation
+% https://leetcode.com/problems/water-bottles/description/comments/2335099/
 
+%% With variables
+/sol {
+2 dict begin
+  /ex exch def
+  /bo exch def
+
+  bo 1 sub ex 1 sub div
+  dup 1 mod sub
+  bo add
+end
+} def
+
+%% Without variables
+/sol' {
+  exch dup
+  1 sub
+  3 2 roll
+  1 sub div
+  dup 1 mod sub
+  add
+} def
+
+
+(sol)=
+9 3 sol ==
+15 4 sol ==
+
+(\nsol')=
+9 3 sol' ==
+15 4 sol' ==
