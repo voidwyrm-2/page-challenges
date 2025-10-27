@@ -32,7 +32,7 @@ local function newCtEntry(pref)
     }
 end
 
----@type table<'add'|'clean'|'fix', CtEntry>
+---@type table<'add'|'solve'|'clean'|'fix', CtEntry>
 local ct = {
     add = newCtEntry('Added'),
     solve = newCtEntry('Solved'),
@@ -78,7 +78,7 @@ print('fixed: `' .. fixed .. '`')
 ]]
 
 
-local fname = "com.txt"
+local fname = 'com.txt'
 
 local f, err = io.open(fname, 'w')
 if err then
