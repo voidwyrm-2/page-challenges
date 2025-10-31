@@ -1,4 +1,4 @@
-(strings) importdef
+/~str (strings) import def
 
 (d1.txt) readf
 
@@ -7,7 +7,7 @@
 
 /inc {dup load 1 add def} def
 
-~strings.chars
+~str.chars
 
 {
   dup

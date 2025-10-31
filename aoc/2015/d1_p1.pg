@@ -1,10 +1,10 @@
-(strings) importdef
+/~str (strings) import def
 
 (d1.txt) readf
 
 /n 0 def
 
-~strings.chars
+~str.chars
 
 {
   dup

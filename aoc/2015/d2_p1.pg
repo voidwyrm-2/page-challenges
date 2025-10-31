@@ -1,4 +1,4 @@
-(strings) importdef
+/~str (strings) import def
 
 (d2.txt) readf
 
@@ -24,7 +24,7 @@
 end
 } def
 
-(\n) ~strings.split
+(\n) ~str.split
 
 /result 0 def
 
@@ -34,7 +34,7 @@ end
   {exit}
   if
 
-  (x) ~strings.split
+  (x) ~str.split
   {} forall
 
   cvi /h edef
