@@ -19,8 +19,7 @@
 
   s
   {
-    dup dup ~str.alpha?
-    exch ~str.digit? or
+    dup ~str.alphadigit?
     {sb ~str.sb-addstr}
     {pop}
     ifelse
@@ -44,7 +43,7 @@ end
     put
   } for
 
-  out () ~str.joins
+  out ~str.join
 end
 } def
 
