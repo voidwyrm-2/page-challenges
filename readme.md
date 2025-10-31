@@ -9,4 +9,4 @@ Various programming challenge solutions using Page, a PostScript-like language.
 
 In order to run these, you'll the need the Page interpreter: https://github.com/voidwyrm-2/page/releases/latest.
 
-These files need version >= 0.33.0.
+These files need version >= 0.33.1.
