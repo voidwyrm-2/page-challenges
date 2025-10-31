@@ -1,8 +1,10 @@
+(strings) importdef
+
 (d1.txt) readf
 
 /n 0 def
 
-(strings) import {chars} scoped
+~strings.chars
 
 {
   dup

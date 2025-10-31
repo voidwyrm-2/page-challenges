@@ -1,4 +1,4 @@
-(strings) import /split from
+(strings) importdef
 
 (d2.txt) readf
 
@@ -24,7 +24,7 @@
 end
 } def
 
-(\n) split
+(\n) ~strings.split
 
 /result 0 def
 
@@ -34,12 +34,12 @@ end
   {exit}
   if
 
-  (x) split
+  (x) ~strings.split
   {} forall
 
-  stn /h edef
-  stn /w edef
-  stn /l edef
+  cvi /h edef
+  cvi /w edef
+  cvi /l edef
 
   l w mul dup /a1 edef 2 mul
   w h mul dup /a2 edef 2 mul
@@ -49,7 +49,8 @@ end
 
   a1 a2 a3 3min add
 
-  /result result add def
+  result add
+  /result edef
 } forall
 
 result =

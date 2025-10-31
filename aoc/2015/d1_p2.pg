@@ -1,3 +1,5 @@
+(strings) importdef
+
 (d1.txt) readf
 
 /n 0 def
@@ -5,7 +7,7 @@
 
 /inc {dup load 1 add def} def
 
-(strings) import {chars} scoped
+~strings.chars
 
 {
   dup
