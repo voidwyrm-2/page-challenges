@@ -1,0 +1,55 @@
+% 125. Valid Palindrome
+% https://leetcode.com/problems/valid-palindrome
+% A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters,
+% it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+% Given a string s, return true if it is a palindrome, or false otherwise.
+%
+% Example 1:
+% Input: s = "A man, a plan, a canal: Panama"
+% Output: true
+% Explanation: "amanaplanacanalpanama" is a palindrome.
+%               aamanaplanacanalpanam
+
+/~str (strings) import def
+
+/clean {
+2 dict begin
+  ~str.chars /s exch def
+  /sb s length ~str.sb-init def
+
+  s
+  {
+    dup dup ~str.alpha?
+    exch ~str.digit? or
+    {sb ~str.sb-addstr}
+    {pop}
+    ifelse
+  } forall
+
+  sb ~str.sb-build ~str.lower
+end
+} def
+
+
+/rev {
+2 dict begin
+  ~str.chars /s exch def
+  /out s length list def
+
+  1 1 s length
+  {
+    out exch dup 1 sub exch % set up for 'put'
+    dup 2 mul sub % negate
+    s exch get
+    put
+  } for
+
+  out () ~str.joins
+end
+} def
+
+/show {clean dup rev eq ==} def
+
+(A man, a plan, a canal: Panama) show
+(race a car) show
+() show
