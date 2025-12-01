@@ -1,0 +1,3 @@
+Larquor,Nyrixquor,Tazdravor,Aeoriral,Ylarphor,Arvardith,Ylarnyn,Thymoryn,Urithsarix,Karthzeth
+
+L7,R6,L5,R2,L1,R6,L2,R2,L3,R5,L2
