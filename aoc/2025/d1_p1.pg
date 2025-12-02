@@ -1,0 +1,56 @@
+/~str (strings) import def
+
+(d1.txt) readf
+
+(\n) ~str.split
+0 1 -2 slice
+
+[
+  {
+    dup
+    1 1 -1 slice cvi
+    exch
+    0 1 1 slice
+
+    (L) eq
+    {neg}
+    if
+  }
+  forall
+]
+
+/n 50 def
+/z 0 def
+
+{
+  n add
+
+  /n exch def
+
+  n 0 lt
+  {
+    {
+      n -1 gt {exit} if
+      /n n 100 add def
+    }
+    loop
+  }
+  if
+
+  n 99 gt
+  {
+    {
+      n 100 lt {exit} if
+      /n n 100 sub def
+    }
+    loop
+  }
+  if
+
+  n 0 eq
+  {/z z 1 add def}
+  if
+}
+forall
+
+z =
