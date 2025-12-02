@@ -3,9 +3,7 @@
 /edef {exch def} def
 /d= {dup ==} def
 
-
-(d3.txt) readf
-
+(d1.txt) readf
 ~str.chars
 
 0 dict begin

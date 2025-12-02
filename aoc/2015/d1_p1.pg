@@ -1,9 +1,8 @@
 /~str (strings) import def
 
-(d1.txt) readf
-
 /n 0 def
 
+(d1.txt) readf
 ~str.chars
 
 {

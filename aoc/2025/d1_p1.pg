@@ -1,7 +1,6 @@
 /~str (strings) import def
 
 (d1.txt) readf
-
 (\n) ~str.split
 0 1 -2 slice
 

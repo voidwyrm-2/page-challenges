@@ -1,12 +1,11 @@
 /~str (strings) import def
 
-(d1.txt) readf
-
 /n 0 def
 /pos 1 def
 
 /inc {dup load 1 add def} def
 
+(d1.txt) readf
 ~str.chars
 
 {
