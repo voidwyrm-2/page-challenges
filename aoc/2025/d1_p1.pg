@@ -24,28 +24,10 @@
 
 {
   n add
-
+  100 mod
+  100 add
+  100 mod
   /n exch def
-
-  n 0 lt
-  {
-    {
-      n -1 gt {exit} if
-      /n n 100 add def
-    }
-    loop
-  }
-  if
-
-  n 99 gt
-  {
-    {
-      n 100 lt {exit} if
-      /n n 100 sub def
-    }
-    loop
-  }
-  if
 
   n 0 eq
   {/z z 1 add def}
